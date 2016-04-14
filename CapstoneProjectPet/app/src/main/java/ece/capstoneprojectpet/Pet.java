@@ -9,6 +9,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.PointF;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.SparseArray;
 import android.view.MotionEvent;
 import android.view.View;
@@ -31,6 +32,7 @@ public class Pet extends Activity {
     TextView hungerText;
     TextView happyText;
     TextView intelText;
+    TextView petID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,9 +49,11 @@ public class Pet extends Activity {
         hungerText = (TextView)findViewById(R.id.hungerText);
         happyText = (TextView)findViewById(R.id.happyText);
         intelText = (TextView)findViewById(R.id.intelText);
-        hungerText.setText("Hunger: " + (stat.getHunger()));
-        happyText.setText("Happy: " + (stat.getHappy()));
-        intelText.setText("Intelligence: " + (stat.getIntel()));
+        petID = (TextView)findViewById(R.id.petID);
+        hungerText.setText("Hunger: " + Integer.toString(stat.getHunger()));
+        happyText.setText("Happy: " + Integer.toString(stat.getHappy()));
+        intelText.setText("Intelligence: " + Integer.toString(stat.getIntel()));
+
 
     }
 
@@ -58,16 +62,16 @@ public class Pet extends Activity {
         startActivity(i);
     }
     public void switchDraw(View v) {
-        Intent i = new Intent(getApplicationContext(), Draw.class);
-        startActivity(i);
+        Intent d = new Intent(getApplicationContext(), Draw.class);
+        startActivity(d);
+    }
+    public void switchTest(View v) {
+        Intent d = new Intent(getApplicationContext(), PersonalityTest.class);
+        startActivity(d);
     }
     public void switchChart(View v) {
-        Intent i = new Intent(getApplicationContext(), Chart.class);
-        startActivity(i);
-    }
-    public void switchExercise(View V) {
-        Intent i = new Intent(getApplicationContext(), Workout.class);
-        startActivity(i);
+        Intent c = new Intent(getApplicationContext(), Chart.class);
+        startActivity(c);
     }
 
     public class CustomView extends View implements View.OnTouchListener {
@@ -168,7 +172,7 @@ public class Pet extends Activity {
             while ((read = InputRead.read(buffer)) > 0) {
                 // char to string
                 String readstring=String.copyValueOf(buffer,0,read);
-                log = log + readstring;
+                log = log + " " + readstring;
             }
             InputRead.close();
             return log;

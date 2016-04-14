@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="ece.capstoneprojectpet">
+    package="ece.capstoneprojectpet" >
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -17,10 +17,10 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme" >
         <activity
-            android:name=".Pet"
-            android:label="@string/app_name">
+            android:name=".PersonalityTest"
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -43,19 +43,14 @@
             android:label="@string/title_activity_map" />
         <activity
             android:name=".Chart"
-            android:label="@string/title_activity_chart" />
-        <activity
-            android:name=".Search"
-            android:label="@string/title_activity_search" />
+            android:label="Chart" />
+
         <activity
             android:name=".Link"
             android:label="@string/title_activity_link" />
         <activity
             android:name=".Host"
-            android:label="@string/title_activity_host" />
-        <activity
-            android:name=".Connect"
-            android:label="@string/title_activity_connect" />
+            android:label="Host" />
         <activity
             android:name=".Find"
             android:label="@string/title_activity_find" />
@@ -70,7 +65,11 @@
             android:label="@string/title_activity_weight_lifting__beginner" />
         <activity
             android:name=".WeightLifting.BreakScreen"
-            android:label="@string/title_activity_break_screen"></activity>
+            android:label="@string/title_activity_break_screen" />
+        <activity
+            android:name=".Pet"
+            android:label="Pet" >
+        </activity>
     </application>
 
 </manifest>

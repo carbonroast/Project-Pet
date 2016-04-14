@@ -1,0 +1,157 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="ece.capstoneprojectpet.PersonalityTest">
+
+    <TextView android:text="Please take this personality test to determine your pet&apos;s stats and looks!" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/IntroText"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Are you extraverted or introverted?"
+        android:id="@+id/IE"
+        android:layout_marginTop="79dp"
+        android:layout_below="@+id/SI"
+        android:layout_alignParentStart="true" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Are you sensing or intuition?"
+        android:id="@+id/SI"
+        android:layout_below="@+id/IntroText"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Are you thinking or feeling?"
+        android:id="@+id/TF"
+        android:layout_below="@+id/IE"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="87dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Are you judging or perceiving?"
+        android:id="@+id/JP"
+        android:layout_marginTop="86dp"
+        android:layout_below="@+id/TF"
+        android:layout_alignParentStart="true" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/JP"
+        android:layout_alignParentStart="true"
+        android:id="@+id/radioGroup"
+        android:layout_alignParentEnd="true"
+        android:weightSum="1">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Judging"
+            android:id="@+id/jRadio"
+            android:checked="false" />
+
+        <RadioButton
+            android:layout_width="118dp"
+            android:layout_height="wrap_content"
+            android:text="Perceiving"
+            android:id="@+id/pRadio"
+            android:checked="false" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/TF"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/radioGroup">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thinking"
+            android:id="@+id/tRadio"
+            android:checked="false" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Feeling"
+            android:id="@+id/fRadio"
+            android:checked="false" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/IE"
+        android:layout_alignParentStart="true"
+        android:id="@+id/radioGroup3"
+        android:layout_above="@+id/radioGroup">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Extraverted"
+            android:id="@+id/eRadio"
+            android:checked="false" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Introverted"
+            android:id="@+id/intrRadio"
+            android:checked="false" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/SI"
+        android:layout_alignParentStart="true"
+        android:id="@+id/radioGroup2"
+        android:layout_above="@+id/radioGroup">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sensing"
+            android:id="@+id/sRadio"
+            android:checked="false" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Intuition"
+            android:id="@+id/intuRadio"
+            android:checked="false" />
+    </RadioGroup>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:id="@+id/submitButton"
+        android:onClick="submit"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
