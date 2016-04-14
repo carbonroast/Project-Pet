@@ -64,8 +64,9 @@ public class WeightLifting_Beginner extends Activity {
                 Button b = (Button) v;
                 if (b.getText().equals("Stop")) {
                     timerHandler.removeCallbacks(timerRunnable);
-                    //Intent i = new Intent(getApplicationContext(), BreakScreen.class);
-                    //startActivity(i);
+                    Intent i = new Intent(getApplicationContext(), BreakScreen.class);
+                    i.putExtra("ReturnScreen", "Beginner");
+                    startActivity(i);
                     b.setText("Start");
                 } else {
                     startTime = System.currentTimeMillis();
