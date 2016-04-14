@@ -15,5 +15,9 @@
     <string name="title_activity_weight_difficulty">weight_difficulty</string>
     <string name="title_activity_weight_lifting__beginner">WeightLifting_Beginner</string>
     <string name="title_activity_break_screen">BreakScreen</string>
+<<<<<<< HEAD
     <string name="title_activity_personality_test">PersonalityTest</string>
+=======
+    <string name="title_activity_weight_lifting__intermediate">WeightLifting_Intermediate</string>
+>>>>>>> origin/master
 </resources>

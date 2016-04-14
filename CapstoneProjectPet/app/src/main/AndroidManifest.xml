@@ -67,9 +67,14 @@
             android:name=".WeightLifting.BreakScreen"
             android:label="@string/title_activity_break_screen" />
         <activity
+<<<<<<< HEAD
             android:name=".Pet"
             android:label="Pet" >
         </activity>
+=======
+            android:name=".WeightLifting.WeightLifting_Intermediate"
+            android:label="@string/title_activity_weight_lifting__intermediate"></activity>
+>>>>>>> origin/master
     </application>
 
 </manifest>
