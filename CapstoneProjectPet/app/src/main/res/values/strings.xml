@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">CapstoneProjectPET</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_draw">Draw</string>
+    <string name="title_activity_map">Map</string>
+    <string name="title_activity_chart">Chart</string>
+    <string name="title_activity_test">Test</string>
+    <string name="title_activity_search">Search</string>
+    <string name="title_activity_link">Link</string>
+    <string name="title_activity_host">Host</string>
+    <string name="title_activity_connect">Connect</string>
+    <string name="title_activity_find">Find</string>
+    <string name="title_activity_weight_difficulty">weight_difficulty</string>
+    <string name="title_activity_weight_lifting__beginner">WeightLifting_Beginner</string>
+    <string name="title_activity_break_screen">BreakScreen</string>
+</resources>
